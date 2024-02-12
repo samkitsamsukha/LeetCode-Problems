@@ -4,7 +4,7 @@ This repository contains my solutions to LeetCode problems. I'll be updating it 
 
 Feel free to explore solutions to specific problems. Each problem file contains the solution code (in C++).
 
-## Problems Solved - 19
+## Problems Solved - 24
 
 ## Contribution
 

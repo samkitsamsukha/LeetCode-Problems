@@ -2,9 +2,9 @@
 
 This repository contains my solutions to LeetCode problems. I'll be updating it regularly as I solve more problems.
 
-Feel free to explore solutions to specific problems. Each problem file contains the solution code (in C++).
+Feel free to explore solutions to specific problems. Each problem file contains the solution code.
 
-## Problems Solved - 31
+## Problems Solved - 32
 
 ## Contribution
 

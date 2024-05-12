@@ -4,7 +4,7 @@ This repository contains my solutions to LeetCode problems. I'll be updating it 
 
 Feel free to explore solutions to specific problems. Each problem file contains the solution code.
 
-![LeetCode Stats](https://leetcard.jacoblin.cool/samkitsamsukha?theme=nord&font=Grandstander&ext=heatmap)
+![LeetCode Stats](https://leetcard.jacoblin.cool/samkitsamsukha?theme=dark&font=Belleza&ext=heatmap)
 
 ## Contribution
 

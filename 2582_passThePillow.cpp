@@ -28,6 +28,24 @@ After two seconds, the 3rd person is holding the pillow.
 class Solution {
 public:
     int passThePillow(int n, int time) {
+        int pos = time%(n-1);
+        int cycles = time/(n-1);
+        if(time<n){
+            return time+1;
+        }
+        else if(cycles%2==1){
+            return n-pos;
+        }
+        else if(cycles%2==0){
+            return pos+1;
+        }
+        return 0;
+    }
+};
+
+class Solution {
+public:
+    int passThePillow(int n, int time) {
         int pos = 1;
         int dir = 1;
         while(time--){

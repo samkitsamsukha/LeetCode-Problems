@@ -7,7 +7,7 @@ A number is called special if it has exactly 2 proper divisors. For example:
     The number 6 is not special because it has proper divisors 1, 2, and 3.
 
 Return the count of numbers in the range [l, r] that are not special.
-
+9
     Example 1:
 
 Input: l = 5, r = 7
@@ -30,21 +30,17 @@ public:
     int nonSpecialCount(int l, int r) {
         int sp = 0;
         vector<bool> sieve(sqrt(r) + 1, true);
-        vector<int> prime;
         sieve[0] = false;
         sieve[1] = false;
         for(int i = 2; i<=sqrt(r); i++){
             if(sieve[i] == true){
-                prime.push_back(i);
                 for(int j = i*i; j<=sqrt(r); j+=i){
                     sieve[j] = false;
                 }
-            }
-        }
-        for(int i : prime){
-            int sq = i*i;
-            if(sq>=l && sq<=r){
-                sp++;
+                int sq = i*i;
+                if(sq>=l && sq<=r){
+                    sp++;
+                }
             }
         }
         return r - l - sp + 1;

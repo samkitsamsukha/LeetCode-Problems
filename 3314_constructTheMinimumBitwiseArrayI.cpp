@@ -50,34 +50,15 @@ Note: Please do not copy the description during the contest to maintain the inte
 
 class Solution {
 public:
-    static bool comparator(pair<int, char> a, pair<int, char> b){
-        if(a.first == b.first){
-            return a.second > b.second;
-        }
-        return a.first < b.first;
-    }
-    int minGroups(vector<vector<int>>& nums) {
-        vector<pair<int, char>> x;
-        int ans = 0;
-        int maxi = INT_MIN;
+    vector<int> minBitwiseArray(vector<int>& nums) {
+        vector<int> ans(nums.size(), -1);
         for(int i = 0; i<nums.size(); i++){
-            x.push_back({nums[i][0], 'S'});
-            x.push_back({nums[i][1], 'E'});
-        }
-        sort(x.begin(), x.end(), comparator);
-        // for(int i = 0; i<x.size(); i++){
-        //     cout << x[i].first << x[i].second << endl;
-        // }
-        for(int i = 0; i<x.size(); i++){
-            if(x[i].second == 'S'){
-                ans++;
-                maxi = max(maxi, ans);
-            }
-            else{
-                ans--;
+            int n = nums[i];
+            int j = n&(n+1);
+            if((j|(j+1)) == n){
+                ans[i] = j;
             }
         }
-        if(maxi == 0) return 1;
-        return maxi;
+        return ans;
     }
 };

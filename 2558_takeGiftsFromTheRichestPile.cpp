@@ -50,3 +50,24 @@ public:
         return sum;
     }
 };
+
+class Solution {
+public:
+    long long pickGifts(vector<int>& a, int k) {
+        priority_queue<int> pq;
+        for(int i = 0; i<a.size(); i++){
+            pq.push(a[i]);
+        }
+        while(k--){
+            int x = pq.top();
+            pq.pop();
+            pq.push((int)(sqrt(x)));
+        }
+        long long sum = 0;
+        while(pq.top()){
+            sum = sum + pq.top();
+            pq.pop();
+        }
+        return sum;
+    }
+};

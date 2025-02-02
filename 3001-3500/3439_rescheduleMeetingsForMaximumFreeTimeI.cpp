@@ -90,7 +90,3 @@ public:
         return maxi;
     }
 };
-
-    
-
-©leetcode

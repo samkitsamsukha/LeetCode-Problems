@@ -43,7 +43,7 @@ struct TrieNode{
 class Trie{
     TrieNode* root;
 public:
-    Trie(){
+    Trie(){ 
         root = new TrieNode();
     }
     void insert(const string& word){
